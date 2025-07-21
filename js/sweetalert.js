@@ -1,0 +1,1 @@
+if(document.getElementById("sb")){document.getElementById("sb").addEventListener("click",e=>{e.preventDefault(),Swal.fire({title:"¡ Cerrado !",text:"Lo sentimos, sábado y domingo no trabajamos",icon:"warning",position:"center"})})}function AlertaCerrarSesion(){Swal.fire({position:"center",icon:"success",title:"Gracias por su visita.",showConfirmButton:!1,timer:1500})}

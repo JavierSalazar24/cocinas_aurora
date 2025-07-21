@@ -1,0 +1,48 @@
+# Quitar la extension.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.*)$ $1.php
+</IfModule>
+
+# Bloquear que se navegue entre carpetas
+
+Options -Indexes
+
+# Paginas de errores.
+
+# ErrorDocument 403 https://softech.cesenas.com/403
+
+ErrorDocument 404 https://softech.cesenas.com/404
+
+# ErrorDocument 500 https://softech.cesenas.com/500
+
+# ErrorDocument 503 https://softech.cesenas.com/503
+
+# Quitar el wwww y reedirigir a https://softech.cesenas.com/
+
+RewriteEngine On
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule (.\*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTP_HOST} ^https://www.softech.cesenas.com/ [NC]
+    RewriteRule (.*) https://softech.cesenas.com/ [R=301,L,QSA]
+</IfModule>
+
+# Implementar robots.txt aunque todavia no exista
+
+<IfModule mod_rewrite.c>
+RewriteBase /
+RewriteCond %{REQUEST_URI} !^/robots.txt$ [NC]
+RewriteCond %{REQUEST_URI} robots.txt [NC]
+RewriteRule .* https://softech.cesenas.com/robots.txt [R=301,L]
+</IfModule>
+
+# Implementar sitemaps
+
+<IfModule mod_alias.c>
+RedirectMatch 301 https://softech.cesenas.com/sitemap_index\.xml$ https://softech.cesenas.com/sitemap_index.xml
+</IfModule>

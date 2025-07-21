@@ -1,0 +1,404 @@
+.switch {
+  background: orange;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: 0 !important;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  top: 13px;
+  left: 10px;
+  margin-bottom: 20px !important;
+}
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #f1f1f1;
+  top: 1.2px;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+.switch.active {
+  background: #343d5b;
+  color: #000;
+}
+.switch.active::after {
+  right: 0;
+  left: unset;
+}
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: 0 0;
+  color: #fff;
+}
+body.dark .indexPrin {
+  background: #474747 !important;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark .rd-navbar-nav-wrap {
+  -webkit-transition: 0.5s ease all !important;
+  transition: 0.5s ease all !important;
+  background: #353535 !important;
+}
+body.dark .rd-navbar-mobile-brand {
+  background: #353535 !important;
+}
+body.dark .rd-navbar-panel button.active span {
+  background: #353535 !important;
+  -webkit-transition: 0s ease all !important;
+  transition: 0s ease all !important;
+}
+body.dark .rd-navbar-panel button.active span {
+  color: #fff !important;
+}
+body.dark .rd-navbar-panel button.active:hover span {
+  color: #ef800d !important;
+  -webkit-transition: 0s ease all !important;
+  transition: 0s ease all !important;
+}
+body.dark .rd-navbar-nav li a,
+body.dark .rd-navbar-submenu-toggle {
+  -webkit-transition: 0s ease all !important;
+  transition: 0s ease all !important;
+  color: #fff !important;
+}
+body.dark .rd-navbar-nav li.active > span,
+body.dark .rd-navbar-nav > li.active > a {
+  color: #ef800d !important;
+  -webkit-transition: 0s ease all !important;
+  transition: 0s ease all !important;
+}
+body.dark .rd-navbar-nav li:hover > span,
+body.dark .rd-navbar-nav > li:hover > a {
+  color: #ef800d !important;
+  -webkit-transition: 0s ease all !important;
+  transition: 0s ease all !important;
+}
+body.dark .rd-navbar-nav .rd-navbar-submenu:hover span,
+body.dark .rd-navbar-nav > .rd-navbar-submenu:hover > a {
+  color: #ef800d !important;
+  -webkit-transition: 0s ease all !important;
+  transition: 0s ease all !important;
+}
+body.dark .rd-navbar-nav .opened > a,
+body.dark .rd-navbar-nav .opened > span {
+  color: #ef800d !important;
+  -webkit-transition: 0s ease all !important;
+  transition: 0s ease all !important;
+}
+body.dark li.rd-navbar-submenu ul.rd-navbar-dropdown > li > a {
+  -webkit-transition: 0.5s ease all !important;
+  transition: 0.5s ease all !important;
+  color: #c9b81d !important;
+}
+body.dark li.rd-navbar-submenu ul.rd-navbar-dropdown > li > a:hover {
+  -webkit-transition: 0.5s ease all !important;
+  transition: 0.5s ease all !important;
+  color: #ef800d !important;
+}
+body.dark li.rd-navbar-submenu ul.rd-navbar-dropdown > li.active > a {
+  -webkit-transition: 0.5s ease all !important;
+  transition: 0.5s ease all !important;
+  color: #ef800d !important;
+}
+body.dark .rd-navbar-nav > li + li:before {
+  -webkit-transition: 0.5s ease all !important;
+  transition: 0.5s ease all !important;
+  background: #505050 !important;
+}
+body.dark .rd-navbar-panel {
+  background: #353535 !important;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark #menus {
+  background: #474747;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark #menus .shell-wide h2 {
+  color: #fff;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark #menus .shell-wide .horario {
+  color: #fff;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark #app,
+body.dark #visitanos {
+  background: #2c2c2c;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark #app .shell h2 {
+  color: #fff;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark #app .shell .range div .range div article {
+  background: #474747;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark #app .shell .post-news-body .post-news-meta .text-black .botonQR,
+body.dark #app .shell .post-news-body .post-news-meta .text-black a,
+body.dark #app .shell .post-news-body div p {
+  color: #fff;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark
+  #app
+  .shell
+  .post-news-body
+  .post-news-meta
+  .text-black
+  .botonQR:hover,
+body.dark #app .shell .post-news-body .post-news-meta .text-black a:hover {
+  color: #b9b9b9 !important;
+  -webkit-transition: 0s ease all;
+  transition: 0s ease all;
+}
+body.dark #porciones {
+  background: #474747;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark #porciones .shell h2 {
+  color: #fff;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark #porciones .shell .offset-top-35,
+body.dark #visitanos .shell .offset-top-35 {
+  color: #fff;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark #porciones .shell .range h6 {
+  color: #fff;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+@media (min-width: 992px) {
+  body.dark .counters [class*="cell-"] + [class*="cell-"]:before {
+    background: #474747;
+  }
+}
+body.dark #contactanos h6 {
+  color: #fff;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark #contactanos .unit-body a {
+  color: #b4b4b4;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark #contactanos .unit-body a:hover {
+  color: #e9e9e9;
+}
+body.dark #ui-to-top {
+  color: #353535;
+  background: #a1a1a1;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark #ui-to-top:hover {
+  color: #e9e9e9;
+  background: #ef800d;
+}
+body.dark .comidas_dia {
+  background: #474747;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark .comidas_dia section .shell h1,
+body.dark .navBars .brand-slogan,
+body.dark .navBars .h6 {
+  color: #fff;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark .perfil {
+  background: #474747;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark .perfil #apellidosPerfil,
+body.dark .perfil #nombrePerfil,
+body.dark .perfil div.offset-top-30 h6 {
+  color: #fff;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark .perfil label,
+body.dark .perfil p.offset-top-10 {
+  color: #d8d8d8;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark .perfil label,
+body.dark .perfil p.offset-top-10 {
+  color: #d8d8d8;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark #asistencia {
+  background: #474747;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark
+  #asistencia
+  .container
+  #asistencia-preguntas
+  .main_asistencia
+  h1.titulo,
+body.dark .section-70 h2 {
+  color: #fff !important;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark
+  #asistencia
+  .container
+  #asistencia-preguntas
+  .main_asistencia
+  .categorias
+  .categoria {
+  background: #ebebeb;
+  color: #979797;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark
+  #asistencia
+  .container
+  #asistencia-preguntas
+  .main_asistencia
+  .categorias
+  .categoria.activa {
+  background: #ebebeb;
+  color: #000;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark
+  #asistencia
+  .container
+  #asistencia-preguntas
+  .main_asistencia
+  .preguntas
+  .contenedor-preguntas
+  .contenedor-pregunta {
+  background: #ebebeb;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark .section-70 #form_mensajes label,
+body.dark .section-70 .offset-top-30 p {
+  color: #d8d8d8;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark #privacidad {
+  background: #2c2c2c;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark #privacidad h1,
+body.dark #privacidad h2,
+body.dark #privacidad h3,
+body.dark #privacidad h4 {
+  color: #fff;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark #privacidad li,
+body.dark #privacidad p {
+  color: #cacaca;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark .alimentos_img {
+  background-image: url(../images/bg-comida2.jpg);
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark .alimentos_img .tarjeta_comida_article,
+body.dark .tarjeta_comida {
+  background-color: #2c2c2c;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark .alimentos_img .divider {
+  background: #fff;
+  fill: #fff;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark .alimentos_img .tarjeta_comida p {
+  color: #ebebeb;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark .alimentos_img .tarjeta_comida .text-verde-oscuro {
+  color: #4bd14b;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark .alimentos_img .tarjeta_comida .text-rojo {
+  color: #f74a4a;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark .tarjeta_comida {
+  -webkit-box-shadow: 0 1px 10px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1px 10px rgba(255, 255, 255, 0.2);
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark .alimentos_img .tarjeta_comida:hover {
+  -webkit-box-shadow: 0 10px 25px 1px rgba(150, 150, 150, 0.418);
+  box-shadow: 0 10px 25px 1px rgba(150, 150, 150, 0.418);
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark .pagina_error {
+  background: #2c2c2c;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark .pagina_error h2 {
+  color: #fff;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark .pagina_error div p > a {
+  color: #a9a9a9 !important;
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all;
+}
+body.dark .pagina_error div p > a:hover {
+  color: #cecece !important;
+}

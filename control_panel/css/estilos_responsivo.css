@@ -1,0 +1,27 @@
+body {
+  font-family: sans-serif !important;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgba(0, 0, 0, 0.671);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(10, 10, 10);
+  border-radius: 7px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input {
+  outline: 0px;
+}
+
+@media screen and (max-width: 450px) {
+  .desaparecer {
+    display: none;
+  }
+}
